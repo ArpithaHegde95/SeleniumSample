@@ -28,6 +28,11 @@ public class HomePage
 	@CacheLookup
 	WebElement textname;
 	
+	
+	@FindBy(xpath="//*[@id=\"search-reusables__filters-bar\"]/ul/li[1]/button")
+	@CacheLookup
+	WebElement peoplebtn;
+	
 	public void setSearchbox(String username)
 	{
 		searchbox.sendKeys(username);
@@ -36,7 +41,7 @@ public class HomePage
 	
 	public void setViewPagebtn()
 	{
-		viewpage.click();;
+		viewpage.click();
 	} 
 	
 	public void settextname()
@@ -45,5 +50,11 @@ public class HomePage
 		{
 			System.out.println("Text is present under Job tab");
 		}
+	} 
+	
+	
+	public void setPeoplebtn()
+	{
+		peoplebtn.click();
 	} 
 }
