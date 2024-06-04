@@ -37,5 +37,8 @@ public class HomePageWithUserProfile extends BaseClass
 		HomePage hp=new HomePage(driver);
 		hp.setSearchbox(username);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		hp.setPeoplebtn();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
 	}
 }
