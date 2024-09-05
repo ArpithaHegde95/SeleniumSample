@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="LinkedInHybridProject" configfailurepolicy="continue">
+	<listeners>
+	<listener class-name="com.LinkedInHybridProject.utilities.Reporting"/>
+	</listeners>
+	<test name="LoginTest">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.LinkedInHybridProject.testCases.LoginPageWithValidCredencials" />
+			<class name="com.LinkedInHybridProject.testCases.LoginPageWithInValidUsername" />
+			<class name="com.LinkedInHybridProject.testCases.LoginPageWithInValidPassword" />
+			<class name="com.LinkedInHybridProject.testCases.LoginPageWithInValidCredencials" />
+			<class name="com.LinkedInHybridProject.testCases.HomePageWithUserProfile" />
+			<class name="com.LinkedInHybridProject.testCases.HomePageWithCompanyProfile" />
+		</classes>
+	</test>
+</suite>
